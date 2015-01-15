@@ -7,4 +7,5 @@ MyAppModule.controller("StartUpController", function($scope) {
     $scope.funding.needed = $scope.funding.startingEstimate * 10;
   }
 
+  $scope.$watch('funding.startingEstimate',$scope.computeNeeded);
 });
