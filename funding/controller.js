@@ -11,5 +11,9 @@ MyAppModule.controller("StartUpController", function($scope) {
     window.alert("もっと顧客を増やしてからにしてください");
   }
 
+  $scope.reset = function(){
+    $scope.funding.startingEstimate = 0;
+  }
+
   $scope.$watch('funding.startingEstimate',$scope.computeNeeded);
 });

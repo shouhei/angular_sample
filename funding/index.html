@@ -4,10 +4,11 @@
     <title>angular</title>
   </head>
   <body>
-    <form ng-submit="requestFunding()" ng-controller="StartUpController">
+    <form ng-controller="StartUpController">
       見込み: <input ng-model="funding.startingEstimate">
       推奨学: {{ funding.needed }}
-    <button>出資を依頼する</buttton>
+    <button ng-click="requestFunding()">出資を依頼する</buttton>
+    <button ng-click="reset()">リセット</button>
     </form>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js"></script>
     <script src="controller.js"></script>
