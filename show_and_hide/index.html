@@ -2,12 +2,17 @@
 <html ng-app="MyApp">
   <head>
     <title>angular</title>
+    <style>
+      .menu-disabled-true{
+        color:gray;
+      }
+    </style>
   </head>
   <body>
     <div ng-controller="DeathrayMenuController">
       <button ng-click="toggleMenu()">メニューをトグル</button>
       <ul ng-show="menuState.show">
-        <li ng-click="strun()">気絶</li>
+        <li class="menu-disabled-{{isDisabled}} " ng-click="stun()">気絶</li>
         <li ng-click="disntegrate()">崩壊</li>
         <li ng-click="erase()">歴史から消去</li>
       </ul>
